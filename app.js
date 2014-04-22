@@ -16,7 +16,6 @@
 //how does it know the use this variable when the input number is entered?
 //whats the difference between this function(number) and the variable num
 /*var fizzBuzz = function() {*/
-function fizzBuzz() {
 	for (var i = 1; i <= 100; i++){
     if(i % 15 === 0){
         console.log("Fizz Buzz");
@@ -33,7 +32,6 @@ function fizzBuzz() {
             $('#result').append(i + " ");
         }
 	}
-}
 /*};
 
 /*$(document).ready(function() {
