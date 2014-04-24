@@ -1,22 +1,21 @@
-/*$(document).ready(function() {
+$(document).ready(function() {
 	$('#addNumber').keydown(function(event) {
-		var fizzNumber = $('#addNumber').val();
+		var fizzNumber = +$('#addNumber').val();
 		if(event.keyCode == 13) {
-			if ((fizzNumber <= 0) && (fizzNumber >= 100)){
+			if (fizzNumber <= 0 || fizzNumber >= 100 || isNaN(fizzNumber)){
 				alert('That is not a number between 1 and 100');
 			} else {
-				/*$('#result').content().remove();
 				fizzBuzz(fizzNumber);
 			}
 
 		}
 	});
-});*/
+});
 
 //how does it know the use this variable when the input number is entered?
 //whats the difference between this function(number) and the variable num
-/*var fizzBuzz = function() {*/
-	for (var i = 1; i <= 100; i++){
+var fizzBuzz = function(number) {
+	for (var i = 1; i <= number; i++){
     if(i % 15 === 0){
         console.log("Fizz Buzz");
         $('#result').append("Fizz Buzz ");
@@ -32,7 +31,7 @@
             $('#result').append(i + " ");
         }
 	}
-/*};
+};
 
 /*$(document).ready(function() {
 	$('#addNumber').keydown(function(event) {
